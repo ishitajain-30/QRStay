@@ -134,7 +134,7 @@ export function AuthForm() {
               </div>
 
               <Button type="submit" className="w-full">
-                Login
+                {isLoading ? "Logging In..." : "Login"}
               </Button>
             </form>
           ) : (
@@ -218,14 +218,8 @@ export function AuthForm() {
                 )}
               </div>
 
-              {/* <RoleSelect
-                control={registerControl}
-                name="role"
-                error={registerErrors.role?.message}
-              /> */}
-
               <Button type="submit" className="w-full">
-                Register
+                {isLoading ? "Registering" : "Register"}
               </Button>
             </form>
           )}
