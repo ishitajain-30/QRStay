@@ -8,7 +8,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { FormField } from "./FormField";
-import type { GuestFormData } from "@/types/guest";
+import type { GuestFormData, VisitPurpose } from "@/types/guest";
 
 interface StayInfoFieldsProps {
   form: UseFormReturn<GuestFormData>;
@@ -18,7 +18,9 @@ export function StayInfoFields({ form }: StayInfoFieldsProps) {
   const {
     register,
     formState: { errors },
-    control,
+    // control,
+    setValue,
+    getValues,
   } = form;
 
   return (
@@ -28,10 +30,13 @@ export function StayInfoFields({ form }: StayInfoFieldsProps) {
         error={errors.purposeofVisit?.message}
       >
         <Select
-          onValueChange={(value) => {
-            control._formValues.purpose = value as any;
-          }}
-          defaultValue="Personal"
+          onValueChange={(value) =>
+            setValue("purposeofVisit", value as VisitPurpose)
+          }
+          // control._formValues.purpose = value as any;
+          value={getValues("purposeofVisit")}
+          // }}
+          // defaultValue="Personal"
         >
           <SelectTrigger className="bg-white">
             <SelectValue placeholder="Select purpose" />

@@ -33,6 +33,7 @@ export function GuestEditDialog({
   onClose,
 }: GuestEditDialogProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
+
   const form = useForm<GuestFormData & { status: GuestStatus }>({
     resolver: zodResolver(guestSchema),
   });
@@ -50,6 +51,7 @@ export function GuestEditDialog({
         endDate: guest.endDate,
         status: guest.status,
       });
+      console.log("Guest Details:", guest);
       console.log("Status:", guest.status);
     }
   }, [guest, form]);
@@ -103,7 +105,8 @@ export function GuestEditDialog({
                 onValueChange={(value) =>
                   form.setValue("status", value as GuestStatus)
                 }
-                defaultValue={guest.status}
+                // defaultValue={guest.status}
+                value={form.getValues("status")}
               >
                 <SelectTrigger className="bg-white">
                   <SelectValue placeholder="Select status" />

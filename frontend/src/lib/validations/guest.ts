@@ -16,6 +16,9 @@ export const guestSchema = z
     idProofNumber: z
       .string()
       .min(5, "ID proof number must be at least 5 characters"),
+    status: z.enum(["checked_in", "checked_out", "pending", "cancelled"], {
+      required_error: "Please select a status",
+    }),
   })
   .refine(
     (data) => {

@@ -53,7 +53,8 @@ export const getBookings = async (req, res) => {
 
       if (!hotel) {
         return res.status(404).json({ message: "Hotel not found" });
-      }S
+      }
+
       const booking = await Bookings.find({ hotelId: hotel._id }).populate(
         "userId",
         "username email"
