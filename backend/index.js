@@ -23,6 +23,10 @@ const connectToDB = async () => {
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.json("Hello Guest");
+});
+
 app.use("/users", usersRoutes);
 app.use("/hotels", hotelsRoutes);
 app.use("/bookings", bookingsRoutes);

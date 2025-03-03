@@ -1,7 +1,7 @@
 import axios from "axios";
 import { getAuthToken } from "../auth";
 
-const baseURL = "http://localhost:8000";
+const baseURL = "https://qr-stay.vercel.app";
 
 const API = axios.create({
   baseURL: baseURL,
