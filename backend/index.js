@@ -22,9 +22,9 @@ const connectToDB = async () => {
 
 app.use(
   cors({
-    origin: ["https://qr-stay.vercel.app"],
+    origin: "*",
     methods: ["POST", "GET"],
-    credentials: true,
+    // credentials: true,
   })
 );
 

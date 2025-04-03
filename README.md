@@ -7,6 +7,7 @@
 ## 🌟 Features
 
 ### 🏢 Main Admin Panel
+
 - **Hotel Management**:
   - Add new hotels with details:
     - Hotel Name
@@ -21,6 +22,7 @@
 ---
 
 ### 📋 Guest Landing Panel
+
 - Displays hotel details:
   - Name, Logo, Address.
 - Guest information form includes:
@@ -38,6 +40,7 @@
 ---
 
 ### 🔑 Guest Admin Panel
+
 - Displays all guest details in a table for the respective hotel.
 - Provides actions to:
   - **Edit** guest information.
@@ -48,15 +51,18 @@
 ## 🛠️ Technical Details
 
 ### Backend
+
 - **Node.js** with **Express.js** for routing.
 - **MongoDB** for secure data storage.
 
 ### Frontend
+
 - Built using a free admin template.
 - Rendering pages with **React.js**.
 - Responsive design powered by **TailwindCSS**.
 
 ### Additional Features
+
 - **QR Code Generation**: Powered by the `qrcode` library in Node.js.
 - **Form Validation**: Ensures data integrity with client-side and server-side validation.
 - **Printing Support**: Enables printing guest details using JavaScript's `window.print()` method.
@@ -67,6 +73,7 @@
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - **Node.js** installed on your system.
 - **MongoDB** setup and running.
 
@@ -75,19 +82,24 @@
 1. Clone the repository:
    ```bash
    git clone https://github.com/ishitajain-30/qrstay.git
+   ```
 2. Navigate to the project directory:
    ```bash
    cd qrstay
+   ```
 3. Install dependencies:
    ```bash
    npm install
+   ```
 
 ### Running the Applicaion
 
 1. Start the backend server:
    ```bash
    npm run dev
+   ```
 2. Start the frontend server:
    ```bash
    npm run dev
+   ```
 3. Access the application at: http://localhost:5173/
